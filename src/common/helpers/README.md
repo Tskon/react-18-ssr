@@ -1,0 +1,1 @@
+Folder for small functions like 'debounce' ,'deepClone', etc.

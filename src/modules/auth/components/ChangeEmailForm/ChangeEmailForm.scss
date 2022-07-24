@@ -1,0 +1,13 @@
+.input:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.success {
+  padding-top: 12px;
+  color: var(--orange);
+}
+
+.error {
+  padding-top: 12px;
+  color: var(--accent-red-1);
+}

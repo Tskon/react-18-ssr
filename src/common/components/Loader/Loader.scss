@@ -1,0 +1,45 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.loader {
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 100%;
+    border: calc(var(--size) / 10) solid transparent;
+    border-top-color: #3498db;
+  }
+
+  &:before {
+    z-index: 100;
+    animation: spin 1s infinite;
+  }
+
+  &:after {
+    border: calc(var(--size) / 10) solid #ccc;
+  }
+}
+
+@keyframes spin{
+  0%{
+    transform: rotate(0deg);
+  }
+
+  100%{
+    transform: rotate(360deg);
+  }
+}

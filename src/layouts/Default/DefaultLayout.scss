@@ -1,0 +1,39 @@
+.body {
+  background-color: var(--background-1);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: $header-height 1fr;
+  min-height: 100vh;
+  max-width: 1424px;
+  margin: 0 auto;
+  background-color: var(--background-1);
+  color: var(--text);
+
+  @include respond-to(sm) {
+    grid-template-rows: 1fr;
+    grid-template-columns: 320px 1fr;
+  }
+}
+
+.header {
+  flex-basis: 100%;
+  height: $header-height;
+}
+
+.sidebar {
+  width: 320px;
+  height: 100%;
+}
+
+.content {
+  flex-grow: 1;
+  width: 100%;
+  margin: 0 auto;
+  padding: 8px;
+
+  @include respond-to(sm) {
+    padding: 16px;
+  }
+}

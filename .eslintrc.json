@@ -1,0 +1,110 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "react-hooks",
+    "jsx-a11y"
+  ],
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript"
+  ],
+  "rules": {
+    "quotes": [2, "single"],
+    "semi": ["error", "never"],
+    "comma-dangle": ["error", "always-multiline"],
+    "comma-spacing": ["error", { "before": false, "after": true }],
+    "keyword-spacing": ["error", {
+      "before": true,
+      "after": true
+    }],
+    "key-spacing": ["error", { "afterColon": true }],
+    "object-curly-spacing": [2, "always"],
+    "array-bracket-spacing": [2, "always"],
+    "arrow-spacing": ["error", { "before": true, "after": true }],
+    "computed-property-spacing": [2, "always"],
+    "no-multi-spaces": "error",
+    "space-before-function-paren": ["error", "never"],
+    "import/newline-after-import": ["error", { "count": 1 }],
+    "import/no-unresolved": "error",
+    "import/no-named-as-default": 0,
+    "import/no-named-as-default-member": "off",
+    "import/order":["error", {
+        "groups": ["builtin", "external", "internal"],
+        "pathGroups":[{
+          "pattern": "react",
+          "group": "external",
+          "position": "before"
+        }],
+        "pathGroupsExcludedImportTypes": ["react"],
+        "newlines-between": "never",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive":true
+        }
+    }],
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-this-alias": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/type-annotation-spacing": ["error", { "before": false, "after": true }],
+    "@typescript-eslint/member-delimiter-style": ["error", {
+      "multiline": {
+        "delimiter": "none",
+        "requireLast": true
+      },
+      "singleline": {
+        "delimiter": "semi",
+        "requireLast": false
+      },
+      "multilineDetection": "brackets"
+    }],
+    "react-hooks/rules-of-hooks": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "react/prop-types": "off",
+    "react/jsx-tag-spacing": ["error", {
+      "closingSlash": "never",
+      "beforeSelfClosing": "always",
+      "afterOpening": "never",
+      "beforeClosing": "allow"
+    }],
+    "react/jsx-curly-spacing": ["error", {
+        "when": "never"
+    }],
+    "react/jsx-boolean-value": ["error", "never"],
+    "react/jsx-closing-bracket-location": ["error", "line-aligned"],
+    "react/jsx-closing-tag-location": "error",
+    "react/jsx-max-props-per-line": ["error", {"maximum": 1}],
+    "react/jsx-first-prop-new-line": ["error", "multiline-multiprop"],
+    "react/jsx-indent-props": ["error", 2],
+    "react/jsx-indent": ["error", 2],
+    "react/jsx-wrap-multilines": ["error", { "declaration": "parens" }],
+    "react/jsx-one-expression-per-line": ["error", {"allow": "none"}],
+    "react/self-closing-comp": "error",
+    "jsx-a11y/img-redundant-alt": "error",
+    "jsx-a11y/alt-text": "error",
+    "jsx-a11y/aria-role": [ 2, {
+      "ignoreNonDOM": true
+    }],
+    "jsx-a11y/no-access-key": "error"
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  }
+}

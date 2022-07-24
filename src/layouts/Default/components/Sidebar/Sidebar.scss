@@ -1,0 +1,22 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 16px 24px;
+  background-color: var(--background-1);
+  color: var(--text);
+  border-right: 1px solid var(--border-1);
+}
+
+.logoWrapper {
+  margin-bottom: 36px;
+}
+
+.logo {
+  height: 24px;
+}
+
+.nav {
+  height: calc(100% - 92px);
+  margin: 0 -8px;
+}
